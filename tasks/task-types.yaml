@@ -1,0 +1,48 @@
+# Base research task types, following the scientific method pipeline.
+# Each task in tasks/queue/ must use one of these types.
+# reference_points is the calibration anchor for planning poker (13 = a
+# typical single-source research pass); estimate up/down in Fibonacci steps.
+
+task_types:
+  extract-problem-statements:
+    description: Extract problem statements from a website or source.
+    reference_points: 8
+  extract-questions:
+    description: Extract open questions from a website or source.
+    reference_points: 8
+  make-observations:
+    description: Make and record observations from a website or source.
+    reference_points: 13
+  formulate-hypothesis:
+    description: Formulate a hypothesis and identify variables (independent, dependent, controlled).
+    reference_points: 13
+  choose-research-design:
+    description: "Choose the research design: controlled, comparative, or factorial."
+    reference_points: 8
+  select-sample-population:
+    description: Select the sample and define the population.
+    reference_points: 8
+  create-tools-procedures:
+    description: Create the tools and procedures needed to run the research.
+    reference_points: 21
+  start-experiment:
+    description: Begin executing a designed experiment. Always requires human approval.
+    reference_points: 21
+    human_approval: always
+  analyze-data:
+    description: Analyze collected data.
+    reference_points: 13
+  interpret-results:
+    description: Interpret analysis results against the hypothesis.
+    reference_points: 13
+  draw-conclusions:
+    description: Draw conclusions or make recommendations.
+    reference_points: 8
+  share-results:
+    description: Share results outside this environment (wiki, blog, notifications). Always requires human approval.
+    reference_points: 5
+    human_approval: always
+  approve-topic:
+    description: Promote a proposed topic to approved. Always requires human approval.
+    reference_points: 2
+    human_approval: always

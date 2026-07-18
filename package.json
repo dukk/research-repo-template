@@ -1,0 +1,25 @@
+{
+  "name": "research-repo-template",
+  "version": "0.1.0",
+  "private": true,
+  "description": "AI-assisted research repository template: OKF research bundle, topics, effort budgeting, and autonomous agent harness",
+  "type": "module",
+  "license": "Apache-2.0",
+  "packageManager": "pnpm@10.11.0",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "convert": "doc-convert",
+    "deconstruct": "doc-deconstruct",
+    "okf:check": "node scripts/okf-check.mjs",
+    "init-repo": "node scripts/init-repo.mjs",
+    "link-harness": "node scripts/link-harness.mjs",
+    "prepare": "node scripts/link-harness.mjs"
+  },
+  "dependencies": {
+    "@dukk/doc-repo-convert": "^0.1.0",
+    "@dukk/doc-repo-deconstruct": "^0.1.0",
+    "yaml": "^2.8.0"
+  }
+}

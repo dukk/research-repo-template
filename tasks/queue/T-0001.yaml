@@ -1,0 +1,28 @@
+# Sample task — a completed single-source research pass on the sample topic.
+id: T-0001
+topic: agentic-memory-systems
+type: make-observations
+status: done
+description: >-
+  Survey the current landscape of memory approaches for long-running AI
+  agents from the topic's seed references; record observations as a finding.
+source: https://example.com
+created: 2026-07-18
+priority: medium
+
+# Planning poker: independent Fibonacci estimates (anchor 13)
+estimates:
+  researcher-alpha: 13
+  researcher-bravo: 13
+  researcher-charlie: 8
+size: 13            # manager-recorded consensus
+
+approval:
+  mode: auto        # auto | human
+  approved_by: research-manager
+  approved_on: 2026-07-18
+
+assignee: researcher-alpha
+effort_actual: 8
+outputs:
+  - research/findings/agentic-memory-systems-landscape/

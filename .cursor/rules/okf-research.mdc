@@ -1,0 +1,18 @@
+---
+description: OKF authoring rules for research bundle Markdown
+globs: research/**/*.md
+alwaysApply: false
+---
+
+# OKF research edits
+
+When editing files under `research/`:
+
+- Concepts are document packages: `<slug>/document.md` + `convert.yaml`.
+- `document.md` (not `index.md` / `log.md`) must keep YAML frontmatter with a non-empty `type`.
+- Prefer recommended fields: `title`, `description`, `tags`, `timestamp`.
+- Research findings must cite sources and link back to their topic: `topic: <slug>` in frontmatter plus a link to `/../topics/<slug>/topic.md`.
+- Use bundle-relative absolute links: `[Title](/category/slug/document.md)`.
+- Update category + root `research/index.md` when adding or renaming concepts.
+- Add a newest-first entry to `research/log.md` for meaningful structural changes.
+- After bulk edits, run `pnpm okf:check`.

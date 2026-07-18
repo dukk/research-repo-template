@@ -1,0 +1,34 @@
+# Effort budget for autonomous research.
+# Unit: story points on the Fibonacci scale (1, 2, 3, 5, 8, 13, 21, 34, 55, ...).
+# The anchor task is 13 points; estimate up or down from there in Fibonacci
+# increments to account for unknown unknowns.
+# Only the research-manager agent edits this file.
+
+period:
+  length: weekly            # weekly | monthly
+  starts: 2026-07-13        # first day of the current period (ISO date)
+
+points:
+  per_period: 100           # total points the manager may spend per period
+  reserve: 13               # points held back for follow-ups / human-requested work
+
+auto_approve:
+  max_task_points: 13       # tasks estimated above this always need human approval
+  max_topic_share: 0.5      # no topic may consume more than this share of per_period
+
+# Task types that ALWAYS require human approval regardless of estimate.
+# Type names must match tasks/task-types.yaml.
+human_approval_required:
+  - start-experiment
+  - share-results
+  - approve-topic
+
+# Estimation rules (planning poker)
+estimation:
+  scale: [1, 2, 3, 5, 8, 13, 21, 34, 55]
+  anchor: 13                # "a typical single-source research pass" = 13
+  min_estimators: 2         # estimates from at least this many researchers
+  respread_threshold: 2     # re-poll when max/min estimates are more than 2 Fibonacci steps apart
+
+# Where actuals are reconciled
+ledger: tasks/ledger.md

@@ -1,0 +1,15 @@
+---
+description: Rules for topics, tasks, budget, and approvals workflow
+globs: topics/**,tasks/**,approvals/**,budget.yaml
+alwaysApply: false
+---
+
+# Research task workflow
+
+- Topics live in `topics/<slug>/` with `topic.md` (frontmatter: `type`, `title`, `status`, `priority`) and `references.md`. New topics start `status: proposed` and require human approval before any research runs.
+- Tasks live in `tasks/queue/<task-id>.yaml`. Valid types are defined in `tasks/task-types.yaml`; do not invent new types inline.
+- Estimates use the Fibonacci scale anchored at 13 (1, 2, 3, 5, 8, 13, 21, 34, ...). Each researcher records an independent estimate under `estimates:`; the manager records the consensus as `size:`.
+- Only the research-manager agent edits `budget.yaml`, task `status`, and `approvals/`.
+- Tasks needing human sign-off are written to `approvals/pending/<task-id>.md`. Humans respond by editing the `## Decision` section; the manager moves resolved files to `approvals/resolved/`.
+- Actual effort is reported on the same Fibonacci scale and reconciled in `tasks/ledger.md`.
+- Run `pnpm okf:check` after structural edits — it validates topics and tasks too.
