@@ -1,5 +1,7 @@
 # Research Repo Template
 
+[![Listed on BundleDex](https://bundledex.net/badge.svg)](https://bundledex.net/bundles/research-repo-template/)
+
 > **Why this exists:** to buy time back. AI agents research very unusual or specific topics on a schedule, tailored to your own interest filters instead of other people's filters or bias — and you stay in the loop through budgets and approvals.
 
 Template repository for **AI-assisted research**: a peer of [`doc-repo-template`](https://github.com/dukk/doc-repo-template) where autonomous agents research human-curated topics and commit findings as an **OKF v0.1 document bundle** under [`research/`](research/). Export tooling comes from [`@dukk/doc-repo-convert`](https://github.com/dukk/doc-repo-tools); supporting apps (wiki, notifications, blog, A2A gateway) live in the peer monorepo [`research-apps`](https://github.com/dukk/research-apps).
